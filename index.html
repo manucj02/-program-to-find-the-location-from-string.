@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <script>
+        function findLocation() {
+            let str = document.getElementById('inputString').value;
+            let word = document.getElementById('wordToFind').value;
+            let location = str.indexOf(word);
+            document.getElementById('result').textContent = location !== -1 ? "Found at  " + location : "Not found";
+        }
+    </script>
+</head>
+<body>
+    <h2>Find Word Location</h2>
+    <P> Enter string</P>
+    <input type="text" id="inputString">
+    
+    <P> Enter word to find</P>
+    <input type="text" id="wordToFind">
+    <br><br>
+    <button onclick="findLocation()">Find Location</button>
+    <p id="result"></p>
+</body>
+</html>
